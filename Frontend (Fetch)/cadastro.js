@@ -14,7 +14,7 @@ form.addEventListener("submit", function (e) {
         password: password.value,
     });
 
-    fetch("http://10.92.198.38:8080/auth/singup", {
+    fetch("http://10.92.198.38:8080/auth/signup", {
         method: "POST",
         body: userData,
         headers:{
@@ -24,5 +24,5 @@ form.addEventListener("submit", function (e) {
     .then((result) => result.json())
     .then((data) => console.log(data))
     .catch((err) => console.log(err));
-    
+    console.log(userData);
 })
